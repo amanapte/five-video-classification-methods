@@ -25,7 +25,7 @@ def extract_files():
     `ffmpeg -i video.mpg image-%04d.jpg`
     """
     data_file = []
-    folders = ['train_v', 'test_v']
+    folders = ['train', 'test']
 
     for folder in folders:
         class_folders = glob.glob(os.path.join(folder, '*'))
