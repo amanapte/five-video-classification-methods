@@ -25,7 +25,8 @@ class_limit = None  # Number of classes to extract. Can be 1-101 or None for all
 data = DataSet(seq_length=seq_length, class_limit=class_limit)
 
 # get the model.
-model = Extractor()
+model_f='inception.011-0.32.hdf5'
+model = Extractor(weights=os.path.join('data','checkpoints',model_f))
 
 # Loop through data.
 pbar = tqdm(total=len(data.data))
