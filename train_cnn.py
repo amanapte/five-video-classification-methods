@@ -44,14 +44,14 @@ def get_generators():
     train_generator = train_datagen.flow_from_directory(
         os.path.join('data', 'train'),
         target_size=(299, 299),
-        batch_size=64,
+        batch_size=32,
         classes=data.classes,
         class_mode='categorical')
 
     validation_generator = test_datagen.flow_from_directory(
         os.path.join('data', 'test'),
         target_size=(299, 299),
-        batch_size=64,
+        batch_size=32,
         classes=data.classes,
         class_mode='categorical')
 
