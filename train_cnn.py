@@ -123,7 +123,7 @@ def main(weights_file):
         print("Loading network from ImageNet weights.")
         # Get and train the top layers.
         model = freeze_all_but_top(model)
-        model = train_model(model, 20, generators)
+        model = train_model(model, 15, generators)
     else:
         print("Loading saved model: %s." % weights_file)
         model.load_weights(weights_file)
