@@ -60,7 +60,8 @@ class ResearchModels():
                        input_shape=self.input_shape,
                        dropout=0.7))
 
-        model.add(Dense(512, activation=PReLU())
+        model.add(Dense(512))
+        model.add(PReLU())
         model.add(Dropout(0.7))
         model.add(Dense(self.nb_classes, activation='softmax'))
 
