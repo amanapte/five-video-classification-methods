@@ -66,7 +66,8 @@ def get_model(weights='imagenet'):
     x = base_model.output
     x = GlobalAveragePooling2D()(x)
     # let's add a fully-connected layer
-    x = Dense(1024, activation=PReLU())(x)
+    x = Dense(1024)(x)
+    x = PReLU()(x)
     # and a logistic layer
     predictions = Dense(len(data.classes), activation='softmax')(x)
 
