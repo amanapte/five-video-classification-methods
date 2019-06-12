@@ -1,11 +1,11 @@
 # Video content classifier
 An InceptionV3 CNN is daisy-chained to an LSTM RNN in order to classify videos into one of 6 categories:
 1.Safe
-2.Violence
-3.Gun
-4.Cold_Arms
-5.Smoking
-6.Kissing
+1.Violence
+1.Gun
+1.Cold_Arms
+1.Smoking
+1.Kissing
 
 ## Requirements
 
