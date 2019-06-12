@@ -8,33 +8,25 @@ An InceptionV3 CNN is daisy-chained to an LSTM RNN in order to classify videos i
 1. Smoking
 1. Kissing
 
+### A `.ipynb` file is also included which takes care of training the models. It can be used exclusivly to get the weight files but must be used along with Google Drive if using Google Colab.
+
 ## Requirements
 
 This code requires you have Keras 2 and TensorFlow 1 or greater installed. Please see the `requirements.txt` file. To ensure you're up to date, run:
 
 `pip install -r requirements.txt`
 
-You must also have `ffmpeg` installed in order to extract the video files. If `ffmpeg` isn't in your system path (ie. `which ffmpeg` doesn't return its path, or you're on an OS other than *nix), you'll need to update the path to `ffmpeg` in `data/2_extract_files.py`.
+You must also have `ffmpeg` installed in order to extract the video files. If `ffmpeg` isn't in your system path (ie. `which ffmpeg` doesn't return its path, or you're on an OS other than *nix), you'll need to update the path to `ffmpeg` in `data/extract_files.py`.
 
 ## Getting the data
 
-First, ensure the following file is present in the  from UCF into the `data` folder:
-
-`cd data && wget http://crcv.ucf.edu/data/UCF101/UCF101.rar`
-
-Then extract it with `unrar e UCF101.rar`.
+The datasets are contained 
 
 Next, create folders (still in the data folder) with `mkdir train && mkdir test && mkdir sequences && mkdir checkpoints`.
 
-Now you can run the scripts in the data folder to move the videos to the appropriate place, extract their frames and make the CSV file the rest of the code references. You need to run these in order. Example:
+Now you can run the script in the data folder to extract frames from the videos and make the CSV file for the rest of the code references.
 
-`python 1_move_files.py`
-
-`python 2_extract_files.py`
-
-## Extracting features
-
- On my Dell with a GeFore 960m GPU, this takes about 8 hours. If you want to limit to just the first N classes, you can set that option in the file.
+`python extract_files.py`
 
 ## Training models
 
@@ -49,9 +41,7 @@ The LSTM is defined in `models.py`. Reference that file to see the model you are
 Training logs are saved to CSV and also to TensorBoard files. To see progress while training, run `tensorboard --logdir=data/logs` from the project root folder.
 
 ## Demo/Using models
-
-
-
+First place the videos that are to be classified into the `demo` directory present int the `data` directory. After ensuring the appropriate weight files are set in the `demo.py` script run it.
 
 ## Dataset Citation
 
