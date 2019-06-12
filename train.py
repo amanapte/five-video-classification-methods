@@ -88,7 +88,7 @@ def main():
     class_limit = None  # int, can be 1-101 or None
     seq_length = 60
     load_to_memory = True  # pre-load the sequences into memory
-    batch_size = 32
+    batch_size = 16
     nb_epoch = 1000
     data_type = 'features'
     image_shape = None
