@@ -1,0 +1,38 @@
+#!bin/bash
+
+cd ./train/Safe/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
+cd ./train/Violence/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
+cd ./train/Gun/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
+cd ./train/Cold_Arms/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
+cd ./train/Smoking/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
+cd ./train/Kissing/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
+
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_0.avi' ./train/Safe/S_a.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_1.avi' ./train/Safe/S_b.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_ba_goo_2.avi' ./train/Safe/S_c.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_3.avi' ./train/Safe/S_d.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_4.avi' ./train/Safe/S_e.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np4_le_goo_5.avi' ./train/Safe/S_f.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_ba_goo_6.avi' ./train/Safe/S_g.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_ba_goo_7.avi' ./train/Safe/S_h.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_ba_goo_8.avi' ./train/Safe/S_i.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_9.avi' ./train/Safe/S_j.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_ba_goo_10.avi' ./train/Safe/S_k.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_11.avi' ./train/Safe/S_l.avi
+mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_12.avi' ./train/Safe/S_m.avi
+
+rm ./train/*/*.mp4
+
+k=1 && cd ./train/Safe/ && for i in *.avi;   do mv "$i" "S_${k}.avi";   k=$(($k+1)); done
+k=1 && cd ./train/Violence/ && for i in *.avi;   do mv "$i" "V_${k}.avi";   k=$(($k+1)); done
+k=1 && cd ./train/Gun/ && for i in *.avi;   do mv "$i" "G_${k}.avi";   k=$(($k+1)); done
+k=1 && cd ./train/Cold_Arms/ && for i in *.avi;   do mv "$i" "C_${k}.avi";   k=$(($k+1)); done
+k=1 && cd ./train/Smoking/ && for i in *.avi;   do mv "$i" "Sm_${k}.avi";   k=$(($k+1)); done
+k=1 && cd ./train/Kissing/ && for i in *.avi;   do mv "$i" "K_${k}.avi";   k=$(($k+1)); done
+
+t=$(($(ls ./train/Safe/*|wc -w)/3)) && mv `ls ./train/Safe/* |head -$t ` ./test/Safe/
+t=$(($(ls ./train/Violence/*|wc -w)/3)) && mv `ls ./train/Violence/* |head -$t ` ./test/Violence/
+t=$(($(ls ./train/Gun/*|wc -w)/3)) && mv `ls ./train/Gun/* |head -$t ` ./test/Gun/
+t=$(($(ls ./train/Cold_Arms/*|wc -w)/3)) && mv `ls ./train/Cold_Arms/* |head -$t ` ./test/Cold_Arms/
+t=$(($(ls ./train/Smoking/*|wc -w)/3)) && mv `ls ./train/Smoking/* |head -$t ` ./test/Smoking/
+t=$(($(ls ./train/Kissing/*|wc -w)/3)) && mv `ls ./train/Kissing/* |head -$t ` ./test/Kissing/
