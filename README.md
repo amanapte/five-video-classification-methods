@@ -66,12 +66,6 @@ smoke
 ### Kissing
 kiss  
 
-Same format as above for the Kaggle dataset:
-### Safe
-NonViolence
-### Violence
-Violence
-
 Now, from the `data` directory run:  
 `./data_prep`
 
