@@ -45,5 +45,14 @@ First place the videos that are to be classified into the `demo` directory prese
 
 ## Dataset Citation
 
+### Action clips dataset
+Pang, Bo, Kaiwen Zha, and Cewu Lu. "Human Action Adverb Recognition: ADHA Dataset and A Three-Stream Hybrid Model." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops. 2018.
+http://mvig.sjtu.edu.cn/research/adha/download.html
 
+### Violence clips dataset
+Real Life Violence Situations Dataset
+https://www.kaggle.com/mohamedmustafa/real-life-violence-situations-dataset
 
+### Gun clips dataset
+Grega, Michał, Seweryn Łach, and Radosław Sieradzki. "Automated recognition of firearms in surveillance video." 2013 IEEE International Multi-Disciplinary Conference on Cognitive Methods in Situation Awareness and Decision Support (CogSIMA). IEEE, 2013.
+http://kt.agh.edu.pl/~grega/guns/
