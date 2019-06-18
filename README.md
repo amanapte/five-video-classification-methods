@@ -50,9 +50,9 @@ Pang, Bo, Kaiwen Zha, and Cewu Lu. "Human Action Adverb Recognition: ADHA Datase
 http://mvig.sjtu.edu.cn/research/adha/download.html
 
 ### Violence clips dataset
-Real Life Violence Situations Dataset .
+Real Life Violence Situations Dataset  
 https://www.kaggle.com/mohamedmustafa/real-life-violence-situations-dataset
 
 ### Gun clips dataset
-Grega, Michał, Seweryn Łach, and Radosław Sieradzki. "Automated recognition of firearms in surveillance video." 2013 IEEE International Multi-Disciplinary Conference on Cognitive Methods in Situation Awareness and Decision Support (CogSIMA). IEEE, 2013 .
+Grega, Michał, Seweryn Łach, and Radosław Sieradzki. "Automated recognition of firearms in surveillance video." 2013 IEEE International Multi-Disciplinary Conference on Cognitive Methods in Situation Awareness and Decision Support (CogSIMA). IEEE, 2013 .  
 http://kt.agh.edu.pl/~grega/guns/
