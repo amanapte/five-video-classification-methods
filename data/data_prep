@@ -5,6 +5,7 @@
 unzip Guns.zip -d gun | awk 'BEGIN { ORS = " " } { print "." }'
 unzip real-life-violence-situations-dataset.zip | awk 'BEGIN { ORS = " " } { print "." }'
 
+
 cd gun && MP4Box -split 5 1.mp4
 cd gun && MP4Box -split 5 2.mp4
 cd gun && MP4Box -split 5 3.mp4
