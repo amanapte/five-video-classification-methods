@@ -22,12 +22,10 @@ You must also have `ffmpeg` installed in order to extract the video files. If `f
 
 ## Getting the data
 
-Download the datasets from:
+Download the datasets from:  
 http://mvig.sjtu.edu.cn/research/adha/download.html  
 https://www.kaggle.com/mohamedmustafa/real-life-violence-situations-dataset  
 http://kt.agh.edu.pl/~grega/guns/
-
-
 
 Next, create folders (still in the data folder) with:  
 `mkdir train && mkdir test && mkdir sequences && mkdir checkpoints`  
@@ -35,7 +33,7 @@ Next, create folders (still in the data folder) with:
 `cd ./train/ && mkdir Safe Violence Gun Cold_Arms Smoking Kissing`  
 
 And move the contents of the specified directories from the ADHA dataset into the `train` directories:
-### Safe  
+### Safe
 brush_hair  
 pour  
 pick  
@@ -54,18 +52,18 @@ walk
 clap  
 drink  
 run  
-### Violence  
+### Violence
 punch  
 hit  
-### Gun  
+### Gun
 shoot_gun  
-### Cold_Arms  
+### Cold_Arms
 sword  
 sword_exercise  
 draw_sword  
-### Smoking  
+### Smoking
 smoke  
-### Kissing  
+### Kissing
 kiss  
 
 Now you can run the script in the data folder to extract frames from the videos and make the CSV file for the rest of the code references.  
