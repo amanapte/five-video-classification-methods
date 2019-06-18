@@ -1,5 +1,5 @@
 # Video content classifier
-An InceptionV3 CNN is daisy-chained to an LSTM RNN in order to classify videos into one of 6 categories:
+An Inception-v3 CNN is daisy-chained to an LSTM RNN in order to classify videos into one of 6 categories:
 
 1. Safe
 1. Violence
