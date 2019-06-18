@@ -36,6 +36,7 @@ def get_generators():
         rescale=1./255,
         shear_range=0.2,
         horizontal_flip=True,
+        zoom_range=0.1,
         rotation_range=10.,
         width_shift_range=0.2,
         height_shift_range=0.2)
@@ -45,14 +46,14 @@ def get_generators():
     train_generator = train_datagen.flow_from_directory(
         os.path.join('data', 'train'),
         target_size=(299, 299),
-        batch_size=32,
+        batch_size=16,
         classes=data.classes,
         class_mode='categorical')
 
     validation_generator = test_datagen.flow_from_directory(
         os.path.join('data', 'test'),
         target_size=(299, 299),
-        batch_size=32,
+        batch_size=16,
         classes=data.classes,
         class_mode='categorical')
 
@@ -65,6 +66,7 @@ def get_model(weights='imagenet'):
     # add a global spatial average pooling layer
     x = base_model.output
     x = GlobalAveragePooling2D()(x)
+    x = BatchNormalization()(x)
     # let's add a fully-connected layer
     x = Dense(1024)(x)
     x = PReLU()(x)
@@ -99,7 +101,7 @@ def freeze_all_but_mid_and_top(model):
     # we need to recompile the model for these modifications to take effect
     # we use SGD with a low learning rate
     model.compile(
-        optimizer=SGD(lr=0.001, momentum=0.9),
+        optimizer=SGD(lr=0.0001, momentum=0.9),
         loss='categorical_crossentropy',
         metrics=['accuracy', 'top_k_categorical_accuracy'])
 
