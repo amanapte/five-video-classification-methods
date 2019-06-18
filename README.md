@@ -8,7 +8,7 @@ An Inception-v3 CNN is daisy-chained to an LSTM RNN in order to classify videos 
 1. Smoking
 1. Kissing
 
-### A `.ipynb` file is also included which takes care of training the models. It can be used exclusivly to get the weight files but must be used along with Google Drive if using Google Colab.
+### A `.ipynb` file is also included which takes care of dataset prep and training the models. It can be used exclusivly to get the weight files but must be used along with Google Drive if using Google Colab.
 
 ## Requirements
 
