@@ -32,7 +32,7 @@ Next, create folders (still in the data folder) with:
 `cd ./test/ && mkdir Safe Violence Gun Cold_Arms Smoking Kissing`  
 `cd ./train/ && mkdir Safe Violence Gun Cold_Arms Smoking Kissing`  
 
-And move the contents of the specified directories from the ADHA dataset into the `train` directories:
+Move the contents of the specified directories from the ADHA dataset into the `train` directories:
 ### Safe
 brush_hair  
 pour  
@@ -65,6 +65,31 @@ draw_sword
 smoke  
 ### Kissing
 kiss  
+
+Same format as above for the Kaggle dataset:
+### Safe
+NonViolence
+### Violence
+Violence
+
+For the gun clips dataset:   
+`unzip Guns.zip -d gun`
+`cd gun && MP4Box -split 5 1.mp4`
+`cd gun && MP4Box -split 5 2.mp4`
+`cd gun && MP4Box -split 5 3.mp4`
+`cd gun && MP4Box -split 5 4.mp4`
+`cd gun && MP4Box -split 5 5.mp4`
+`cd gun && MP4Box -split 5 6.mp4`
+`cd gun && MP4Box -split 5 7.mp4`
+`cd gun && rm 1.mp4 2.mp4 3.mp4 4.mp4 5.mp4 6.mp4 7.mp4`
+`cd gun && rm 1_001.mp4 1_002.mp4 1_129.mp4`
+`cd gun && rm 2_001.mp4 2_002.mp4 2_050.mp4`
+`cd gun && rm 3_001.mp4 3_002.mp4 3_003.mp4 3_053.mp4`
+`cd gun && rm 4_001.mp4 4_002.mp4 4_039.mp4 4_040.mp4`
+`cd gun && rm 5_001.mp4 5_034.mp4 5_035.mp4`
+`cd gun && rm 6_001.mp4`
+`cd gun && rm 7_001.mp4 7_002.mp4 7_020.mp4`
+And move the contents from the `gun` directory to the `Gun` directory in the `train` directory
 
 Now you can run the script in the data folder to extract frames from the videos and make the CSV file for the rest of the code references.  
 `python extract_files.py`
