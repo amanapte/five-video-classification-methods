@@ -84,6 +84,8 @@ The LSTM is defined in `models.py`. Reference that file to see the model you are
 
 Training logs are saved to CSV and also to TensorBoard files. To see progress while training, run `tensorboard --logdir=data/logs` from the project root folder.
 
+The weight files are in the `data/checkpoints` directory.
+
 ## Demo/Using models
 First place the videos that are to be classified into the `demo` directory present in the `data` directory. After ensuring the appropriate weight files are set in the `demo.py` script run it.  
 ### Video files should be in AVI format
