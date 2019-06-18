@@ -1,4 +1,28 @@
-#!bin/bash
+#!bin/bash  
+
+!unzip Guns.zip -d gun | awk 'BEGIN { ORS = " " } { print "." }'
+!unzip real-life-violence-situations-dataset.zip | awk 'BEGIN { ORS = " " } { print "." }'
+
+cd gun && MP4Box -split 5 1.mp4
+cd gun && MP4Box -split 5 2.mp4
+cd gun && MP4Box -split 5 3.mp4
+cd gun && MP4Box -split 5 4.mp4
+cd gun && MP4Box -split 5 5.mp4
+cd gun && MP4Box -split 5 6.mp4
+cd gun && MP4Box -split 5 7.mp4
+cd gun && rm 1.mp4 2.mp4 3.mp4 4.mp4 5.mp4 6.mp4 7.mp4
+cd gun && rm 1_001.mp4 1_002.mp4 1_129.mp4
+cd gun && rm 2_001.mp4 2_002.mp4 2_050.mp4
+cd gun && rm 3_001.mp4 3_002.mp4 3_003.mp4 3_053.mp4
+cd gun && rm 4_001.mp4 4_002.mp4 4_039.mp4 4_040.mp4
+cd gun && rm 5_001.mp4 5_034.mp4 5_035.mp4
+cd gun && rm 6_001.mp4
+cd gun && rm 7_001.mp4 7_002.mp4 7_020.mp4
+
+mv ./gun/* ./train/Gun/
+mv ./'Real Life Violence Dataset'/NonViolence/* ./train/Safe/
+mv ./'Real Life Violence Dataset'/Violence/* ./train/Violence/
+
 
 cd ./train/Safe/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
 cd ./train/Violence/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
@@ -22,6 +46,7 @@ mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2
 mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_12.avi' ./train/Safe/S_m.avi
 
 rm ./train/*/*.mp4
+rmdir gun 'Real Life Violence Dataset'
 
 k=1 && cd ./train/Safe/ && for i in *.avi;   do mv "$i" "S_${k}.avi";   k=$(($k+1)); done
 k=1 && cd ./train/Violence/ && for i in *.avi;   do mv "$i" "V_${k}.avi";   k=$(($k+1)); done
