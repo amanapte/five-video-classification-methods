@@ -58,11 +58,11 @@ class ResearchModels():
         model = Sequential()
         model.add(LSTM(2048, return_sequences=False,
                        input_shape=self.input_shape,
-                       dropout=0.7))
+                       dropout=0.5,recurrent_dropout=0.5))
 
         model.add(Dense(512))
         model.add(PReLU())
-        model.add(Dropout(0.7))
+        model.add(Dropout(0.4))
         model.add(Dense(self.nb_classes, activation='softmax'))
 
         return model
