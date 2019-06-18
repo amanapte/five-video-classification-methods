@@ -74,7 +74,7 @@ Now you can run the script in the data folder to extract frames from the videos 
 
 ## Training models
 
-The Inception CNN is trained first using the `train_cnn.py` scipt.
+The Inception CNN is trained first using the `train_cnn.py` script.
 
 Before you can run the `LSTM` , you need to extract features from the images with the CNN. This is done by running `extract_features.py`.
 
