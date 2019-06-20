@@ -14,6 +14,7 @@ from keras.models import Model
 from keras.layers import Dense, GlobalAveragePooling2D
 from keras.callbacks import ModelCheckpoint, TensorBoard, EarlyStopping
 from keras.layers.advanced_activations import PReLU
+from keras.layers.normalization import BatchNormalization
 from data import DataSet
 import os.path
 
