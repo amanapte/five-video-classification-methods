@@ -56,7 +56,7 @@ class ResearchModels():
         our CNN to this model predomenently."""
         # Model.
         model = Sequential()
-        model.add(LSTM(2048, return_sequences=False,
+        model.add(LSTM(1024, return_sequences=False,
                        input_shape=self.input_shape,
                        dropout=0.5,recurrent_dropout=0.5))
 
