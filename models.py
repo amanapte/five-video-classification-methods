@@ -13,7 +13,7 @@ import sys
 
 class ResearchModels():
     def __init__(self, nb_classes, model, seq_length,
-                 saved_model=None, features_length=2048):
+                 saved_model=None, features_length=1024):
         """
         `nb_classes` = the number of classes to predict
         `seq_length` = the length of our video sequences
