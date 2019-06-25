@@ -5,14 +5,14 @@
 unzip Guns.zip -d gun | awk 'BEGIN { ORS = " " } { print "." }'
 unzip real-life-violence-situations-dataset.zip | awk 'BEGIN { ORS = " " } { print "." }'
 
+cd ./gun/ && MP4Box -split 5 1.mp4
+cd ./gun/ && MP4Box -split 5 2.mp4
+cd ./gun/ && MP4Box -split 5 3.mp4
+cd ./gun/ && MP4Box -split 5 4.mp4
+cd ./gun/ && MP4Box -split 5 5.mp4
+cd ./gun/ && MP4Box -split 5 6.mp4
+cd ./gun/ && MP4Box -split 5 7.mp4
 
-MP4Box -split 5 ./gun/1.mp4
-MP4Box -split 5 ./gun/2.mp4
-MP4Box -split 5 ./gun/3.mp4
-MP4Box -split 5 ./gun/4.mp4
-MP4Box -split 5 ./gun/5.mp4
-MP4Box -split 5 ./gun/6.mp4
-MP4Box -split 5 ./gun/7.mp4
 rm ./gun/1.mp4 ./gun/2.mp4 ./gun/3.mp4 ./gun/4.mp4 ./gun/5.mp4 ./gun/6.mp4 ./gun/7.mp4
 rm ./gun/1_001.mp4 ./gun/1_002.mp4 ./gun/1_129.mp4
 rm ./gun/2_001.mp4 ./gun/2_002.mp4 ./gun/2_050.mp4
