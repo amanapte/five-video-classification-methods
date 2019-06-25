@@ -82,7 +82,8 @@ The LSTM is trained using the `train.py`script.
 
 The LSTM is defined in `models.py`. Reference that file to see the model you are training in `train.py`.
 
-Training logs are saved to CSV and also to TensorBoard files. To see progress while training, run `tensorboard --logdir=data/logs` from the project root folder.
+Training logs are saved to CSV and also to TensorBoard files. 
+To see progress while training, run `tensorboard --logdir=data/logs` from the project root folder.
 
 The weight files are in the `data/checkpoints` directory.
 
