@@ -5,13 +5,15 @@
 unzip Guns.zip -d gun | awk 'BEGIN { ORS = " " } { print "." }'
 unzip real-life-violence-situations-dataset.zip | awk 'BEGIN { ORS = " " } { print "." }'
 
-cd ./gun/ && MP4Box -split 5 1.mp4
-cd ./gun/ && MP4Box -split 5 2.mp4
-cd ./gun/ && MP4Box -split 5 3.mp4
-cd ./gun/ && MP4Box -split 5 4.mp4
-cd ./gun/ && MP4Box -split 5 5.mp4
-cd ./gun/ && MP4Box -split 5 6.mp4
-cd ./gun/ && MP4Box -split 5 7.mp4
+cd ./gun/
+MP4Box -split 5 1.mp4
+MP4Box -split 5 2.mp4
+MP4Box -split 5 3.mp4
+MP4Box -split 5 4.mp4
+MP4Box -split 5 5.mp4
+MP4Box -split 5 6.mp4
+MP4Box -split 5 7.mp4
+cd ..
 
 rm ./gun/1.mp4 ./gun/2.mp4 ./gun/3.mp4 ./gun/4.mp4 ./gun/5.mp4 ./gun/6.mp4 ./gun/7.mp4
 rm ./gun/1_001.mp4 ./gun/1_002.mp4 ./gun/1_129.mp4
@@ -57,12 +59,14 @@ mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2
 rm ./train/*/*.mp4
 rmdir gun 'Real Life Violence Dataset'
 
-k=1 && cd ./train/Safe/ && for i in *.avi;   do mv "$i" "S_${k}.avi";   k=$(($k+1)); done && cd ../../
-k=1 && cd ./train/Violence/ && for i in *.avi;   do mv "$i" "V_${k}.avi";   k=$(($k+1)); done && cd ../../
-k=1 && cd ./train/Gun/ && for i in *.avi;   do mv "$i" "G_${k}.avi";   k=$(($k+1)); done && cd ../../
-k=1 && cd ./train/Cold_Arms/ && for i in *.avi;   do mv "$i" "C_${k}.avi";   k=$(($k+1)); done && cd ../../
-k=1 && cd ./train/Smoking/ && for i in *.avi;   do mv "$i" "Sm_${k}.avi";   k=$(($k+1)); done && cd ../../
-k=1 && cd ./train/Kissing/ && for i in *.avi;   do mv "$i" "K_${k}.avi";   k=$(($k+1)); done && cd ../../
+cd ./train/
+k=1 && cd ./Safe/ && for i in *.avi;   do mv "$i" "S_${k}.avi";   k=$(($k+1)); done && cd ..
+k=1 && cd ./Violence/ && for i in *.avi;   do mv "$i" "V_${k}.avi";   k=$(($k+1)); done && cd ..
+k=1 && cd ./Gun/ && for i in *.avi;   do mv "$i" "G_${k}.avi";   k=$(($k+1)); done && cd ..
+k=1 && cd ./Cold_Arms/ && for i in *.avi;   do mv "$i" "C_${k}.avi";   k=$(($k+1)); done && cd ..
+k=1 && cd ./Smoking/ && for i in *.avi;   do mv "$i" "Sm_${k}.avi";   k=$(($k+1)); done && cd ..
+k=1 && cd ./Kissing/ && for i in *.avi;   do mv "$i" "K_${k}.avi";   k=$(($k+1)); done && cd ..
+cd ..
 
 t=$(($(ls ./train/Safe/*|wc -w)/3)) && mv `ls ./train/Safe/* |head -$t ` ./test/Safe/
 t=$(($(ls ./train/Violence/*|wc -w)/3)) && mv `ls ./train/Violence/* |head -$t ` ./test/Violence/
