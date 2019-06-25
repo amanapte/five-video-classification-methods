@@ -30,17 +30,17 @@ mv ./'Real Life Violence Dataset'/Violence/* ./train/Violence/
 
 cd ./train/
 cd ./Safe/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
-cd ../
+cd ..
 cd ./Violence/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
-cd ../
+cd ..
 cd ./Gun/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
-cd ../
+cd ..
 cd ./Cold_Arms/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
-cd ../
+cd ..
 cd ./Smoking/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
-cd ../
+cd ..
 cd ./Kissing/ && for i in *.mp4;do name=`echo $i | cut -d'.' -f1`;echo $name;ffmpeg -loglevel panic -y -i "$i" -vcodec copy -acodec copy "${name}.avi";done
-cd ../
+cd ../..
 
 mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_0.avi' ./train/Safe/S_a.avi
 mv ./train/Safe/'-_FREE_HUGS_-_Abrazos_Gratis_www_abrazosgratis_org_hug_u_cm_np2_le_goo_1.avi' ./train/Safe/S_b.avi
