@@ -1,5 +1,5 @@
 """
-After moving all the files using the 1_ file, we run this one to extract
+After moving all the files we run this one to extract
 the images from the videos and also create a data file we can use
 for training and testing later.
 """
