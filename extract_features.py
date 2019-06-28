@@ -4,12 +4,6 @@ models make use of.
 
 You can change you sequence length and limit to a set number of classes
 below.
-
-class_limit is an integer that denotes the first N classes you want to
-extract features from. This is useful is you don't want to wait to
-extract all 101 classes. For instance, set class_limit = 8 to just
-extract features for the first 8 (alphabetical) classes in the dataset.
-Then set the same number when training models.
 """
 import numpy as np
 import os.path
@@ -19,14 +13,12 @@ from tqdm import tqdm
 
 # Set defaults.
 seq_length = 60
-class_limit = None  # Number of classes to extract. Can be 1-101 or None for all.
+class_limit = None  # Number of classes to extract.
 
 # Get the dataset.
 data = DataSet(seq_length=seq_length, class_limit=class_limit)
 
 # get the model.
-#model_f='inception.011-0.32.hdf5'
-#model = Extractor(weights=os.path.join('data','checkpoints',model_f))
 model= Extractor()
 
 #Loop through data.
