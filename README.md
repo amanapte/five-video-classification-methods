@@ -28,7 +28,7 @@ https://www.kaggle.com/mohamedmustafa/real-life-violence-situations-dataset
 http://kt.agh.edu.pl/~grega/guns/
 
 Next, create folders (still in the data folder) with:  
-`mkdir train test sequences checkpoints`  
+`mkdir train test sequences checkpoints demo`  
 `cd ./test/ && mkdir Safe Violence Gun Cold_Arms Smoking Kissing`  
 `cd ./train/ && mkdir Safe Violence Gun Cold_Arms Smoking Kissing`  
 
