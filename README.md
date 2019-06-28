@@ -90,7 +90,7 @@ The weight files are in the `data/checkpoints` directory.
 ## Demo/Using models
 First place the videos that are to be classified into the `demo` directory present in the `data` directory. After ensuring the appropriate weight files are set in the `demo.py` script run it.  
 ### Video files should be in AVI format
-Please Note: Due to a lack of adequate training data for the last 3 classes, the model is not able to generalize very well for them. An improvement could be to include more training data for the same.
+### Please Note: Due to a lack of adequate training data for the last 3 classes, the model is not able to generalize very well for them. An improvement could be to include more training data for the same.
 
 ## Dataset Citation
 
